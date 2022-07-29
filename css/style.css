@@ -1,0 +1,119 @@
+*,
+*::after,
+*::before{
+	box-sizing: border-box;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+    color: #000;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.content {
+    display: flex;
+    margin-top: 100px;
+}
+.content__input {
+    border: 1px solid #cecece;
+    padding: 15px 10px;
+    min-width: 265px;
+}
+.content__input-first {
+    margin-right: 20px;
+    position: relative;
+    cursor: pointer;
+    padding: 10px 10px;
+}
+
+.content__input-checkboxes {
+    left: -1px;
+    top: 42px;
+    position: absolute;
+    display: none;
+    border: 1px solid #b4b4b4;
+    padding: 15px 15px;
+}
+.content__input-checkboxes.active{
+    display: flex;
+}
+.content__input-checkboxes__list {
+    margin-right: 30px;
+}
+.content__input-checkboxes__list:last-child{
+    margin-right: 0;
+}
+.content__input-checkboxes__item {
+    white-space: nowrap;
+    list-style: none;
+}
+.content__checkboxes-item__label {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 7px;
+}
+.content__input-second {
+    display: flex;
+    padding: 5px 10px;
+}
+.content__input-search{
+    border: none;
+    outline: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    margin-right: 10px;
+}
+.content__input-button {
+    background-color: #1a7eb0;
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    transition: .4s all;
+    cursor: pointer;
+}
+.content__input-button:hover{
+    background-color: #2995cb;
+}
+#dropdown_btn{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    top: 0;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+#dropdown_btn::before,
+#dropdown_btn::after{
+    content: "";
+    position: absolute;
+    width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 12px solid #1a7eb0;
+    right: 10px;
+}
+#dropdown_btn::before{
+    top: 7px;
+}
+#dropdown_btn::after{
+    transform: rotate(180deg);
+    bottom: 7px;
+}
